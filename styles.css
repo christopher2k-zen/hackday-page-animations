@@ -1,0 +1,80 @@
+@font-face {
+  font-family: "cinderblock175";
+  src: url("./assets/cinderblock-175-webfont.woff2") format("woff2"),
+    url("./assets/cinderblock-175-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  height: 100vh;
+  width: 100vw;
+  font-size: 62.5%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #d5dbe2;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+section {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.page1 {
+  background: red;
+}
+
+.page2 {
+  background: blueviolet;
+}
+
+section.hidden {
+  display: none;
+}
+
+.form button {
+  border: none;
+  cursor: pointer;
+  background: transparent;
+}
+
+/* Page 1 transition */
+section.page1.inactive {
+  margin-top: -100%;
+  visibility: hidden;
+  opacity: 0;
+  transition: 500ms margin ease-in, 500ms 0ms visibility ease-out,
+    500ms opacity ease-in;
+}
+
+section.page1.active {
+  margin: 0;
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Page 2 transition */
+/*section.page2.inactive p {
+  visibility: hidden;
+  opacity: 0;
+
+  transition: 500ms 0ms visibility ease-out, 500ms opacity ease-in;
+}
+
+section.page2.active p {
+  opacity: 1;
+  visibility: visible;
+}*/
